@@ -1,0 +1,12 @@
+Microsoft Word is a word processor developed by Microsoft. It was first released on October 25, 1983,[9] under the name Multi-Tool Word for Xenix systems.[10][11][12] Subsequent versions were later written for several other platforms including: IBM PCs running DOS (1983), Apple Macintosh running the Classic Mac OS (1985), AT&T UNIX PC (1985), Atari ST (1988), OS/2 (1989), Microsoft Windows (1989), SCO Unix (1990), macOS (2001), Web browsers (2010), iOS (2014) and Android (2015). Using Wine, versions of Microsoft Word before 2013 can be run on Linux.
+
+Commercial versions of Word are licensed as a standalone product or as a component of Microsoft 365 suite of software, which can be purchased either with a perpetual license or as part of a Microsoft 365 subscription, respectively.
+
+History
+Main article: History of Microsoft Word
+Origins
+In 1981, Microsoft hired Charles Simonyi, the primary developer of Bravo, the first GUI word processor, which was developed at Xerox PARC.[13] Simonyi started work on a word processor called Multi-Tool Word and soon hired Richard Brodie, a former Xerox intern, who became the primary software engineer.[13][14][15]
+
+Microsoft announced Multi-Tool Word for Xenix[13] and MS-DOS in 1983.[16] Its name was soon simplified to Microsoft Word.[10] Free demonstration copies of the application were bundled with the November 1983 issue of PC World, making it the first to be distributed on-disk with a magazine.[10][17] That year Microsoft demonstrated Word running on Windows.[18]
+
+Unlike most MS-DOS prog

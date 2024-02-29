@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{34450717-F0DB-4C25-A659-2AEA1539C13D}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="SchwindEncrypt.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SchwindEncryptTest\SchwindEncryptTests.dproj">
+            <Dependencies>SchwindEncrypt.dproj</Dependencies>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="SchwindEncrypt">
+        <MSBuild Projects="SchwindEncrypt.dproj"/>
+    </Target>
+    <Target Name="SchwindEncrypt:Clean">
+        <MSBuild Projects="SchwindEncrypt.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SchwindEncrypt:Make">
+        <MSBuild Projects="SchwindEncrypt.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SchwindEncryptTests" DependsOnTargets="SchwindEncrypt">
+        <MSBuild Projects="SchwindEncryptTest\SchwindEncryptTests.dproj"/>
+    </Target>
+    <Target Name="SchwindEncryptTests:Clean" DependsOnTargets="SchwindEncrypt:Clean">
+        <MSBuild Projects="SchwindEncryptTest\SchwindEncryptTests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SchwindEncryptTests:Make" DependsOnTargets="SchwindEncrypt:Make">
+        <MSBuild Projects="SchwindEncryptTest\SchwindEncryptTests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="SchwindEncrypt;SchwindEncryptTests"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="SchwindEncrypt:Clean;SchwindEncryptTests:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="SchwindEncrypt:Make;SchwindEncryptTests:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
